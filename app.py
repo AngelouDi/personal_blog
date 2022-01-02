@@ -1,9 +1,8 @@
 import sys
 from datetime import datetime
 from flask import Flask, render_template
-from flask_flatpages import FlatPages, pygments_style_defs
+from flask_flatpages import FlatPages
 from flask_frozen import Freezer
-import re
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -16,11 +15,6 @@ app = Flask(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
 app.config.from_object(__name__)
-
-
-@app.route('/pygments.css')
-def pygments_css():
-    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
 
 @app.route("/dev_posts/")
@@ -60,11 +54,6 @@ def index():
 @app.route("/contact/")
 def contact():
     return render_template('contact.html')
-
-
-@app.template_filter()
-def regex_replace(s, find, replace):
-    return re.sub(find, replace, s)
 
 
 if __name__ == "__main__":
