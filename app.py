@@ -8,6 +8,7 @@ DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
+FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
 DEV_POSTS_DIR = 'dev_posts'
 PERSONAL_POSTS_DIR = 'personal_posts'
 
@@ -35,14 +36,14 @@ def personal_posts():
 def dev_post(name):
     path = '{}/{}'.format(DEV_POSTS_DIR, name)
     post = flatpages.get_or_404(path)
-    return (render_template('post.html', post=post))
+    return render_template('post.html', post=post)
 
 
 @app.route('/personal_posts/<name>/')
 def personal_post(name):
     path = '{}/{}'.format(PERSONAL_POSTS_DIR, name)
     post = flatpages.get_or_404(path)
-    return (render_template('post.html', post=post))
+    return render_template('post.html', post=post)
 
 
 @app.route('/')
@@ -50,6 +51,7 @@ def index():
     posts = [p for p in flatpages]
     posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"), reverse=True)
     return render_template('index.html', posts=posts)
+
 
 @app.route("/contact/")
 def contact():

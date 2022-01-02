@@ -17,7 +17,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 }
 
 pre { line-height: 125%;}
-code { font-family: 'JetBrains Mono'; }
+code { font-family: 'JetBrains Mono';
+    font-size: 12px;
+    /*padding: 18px;*/
+    /*background: #080907;*/
+    /*border-radius: 5px;*/
+    /*box-shadow: 5px 5px 10px #000000;*/
+}
 
 h1, h2, h3, h4 {
     color: #ffffff;

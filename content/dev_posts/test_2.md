@@ -1,266 +1,141 @@
-title: And this is a second post
+title: And this is a second post 
 description: This is a greater test
 date: 23/12/2022
 tags: xlib, x11
 
-# Markdown Guide
+Syntax highlighting
 
-![The Ultimate Guide to Markdown](http://blog.ghost.org/content/images/2015/03/markdown-guide-1.jpg)
+``` js
+var foo = function (bar) {
+  return bar++;
+};
 
-## Basic Markdown Formatting
-
-### Headings
-
-    # This is an <h1> tag
-    ## This is an <h2> tag
-    ### This is an <h3> tag
-    #### This is an <h4> tag
-    ##### This is an <h5> tag
-    ###### This is an <h6> tag
-    
-### Emphasis
-
-    *This text will be italic*
-    _This will also be italic_
-    
-    **This text will be bold**
-    __This will also be bold__
-    
-    _You **can** combine them_
-    
-Result:
-
-*This text will be italic*
-
-_This will also be italic_
-
-**This text will be bold**
-
-__This will also be bold__
-
-_You **can** combine them_
-
-### Lists
-
-**Inordered:**
-
-    * Milk
-    * Bread
-        * Wholegrain
-    * Butter
-
-Result:
-
-* Milk
-* Bread
-    * Wholegrain
-* Butter
-
-**Ordered:**
-
-    1. Tidy the kitchen  
-    2. Prepare ingredients  
-    3. Cook delicious things
-
-Result:
-
-1. Tidy the kitchen  
-2. Prepare ingredients  
-3. Cook delicious things
-
-### Images
-
-    ![Alt Text](url)
-
-Result:
-
-![m'lady](http://i.imgur.com/v8IVDka.jpg)
-
-### Links
-
-    [link](http://example.com)
-    
-Result:
-
-[link](http://example.com)
-
-### Blockquotes
-
-    As Kanye West said:
-
-    > We're living the future so
-    > the present is our past.
-
-Result:
-
-As Kanye West said:
-> We're living the future so
-> the present is our past.
-
-### Horizontal Rules
-
-    ---
-
-Result:
-
----
-
-### Code Snippets
-
-    Indenting by 4 spaces will turn an entire paragraph into a code-block.
-
-Result:
-
-    .my-link {
-        text-decoration: underline;
-    }
-
-### Reference Lists & Titles
-
-    **The quick brown [fox][1], jumped over the lazy [dog][2].**
-
-    [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-    [2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
-
-Result:
-
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
-
-[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
-
-### Escaping
-
-    \*literally\*
-
-Result:
-
-\*literally\*
-
-### Embedding HTML
-
-    <button class="button-save large">Big Fat Button</button>
-
-Result:
-
-<button class="button-save large">Big Fat Button</button>
-
-## Advanced Markdown
-
-Note: Some syntax which is not standard to native Markdown. They're extensions of the language.
-
-### Strike-throughs
-
-    ~~deleted words~~
-
-Result:
-
-~~deleted words~~
-
-### Highlights
-
-Work in [Ghost](https://ghost.org/):
-
-    ==oooh fancy==
-
-Result:
-
-==oooh fancy==
-
-### Automatic Links
-
-    https://ghost.org
-
-Result:
-
-https://ghost.org
-
-### Markdown Footnotes
-
-Work in [Ghost](https://ghost.org/):
-
-    The quick brown fox[^1] jumped over the lazy dog[^2].
-
-    [^1]: Foxes are red
-    [^2]: Dogs are usually not red
-
-Result:
-
-The quick brown fox[^1] jumped over the lazy dog[^2].
-
-[^1]: Foxes are red
-[^2]: Dogs are usually not red
-
-## GitHub Flavored Markdown
-
-### Syntax Highlighting
-
-    ```javascript
-    function fancyAlert(arg) {
-      if(arg) {
-        $.facebox({div:'#foo'})
-      }
-    }
-    ```
-
-Result:
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
+console.log(foo(5));
 ```
 
-### Task Lists
+## Tables
 
-    - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-    - [x] list syntax required (any unordered or ordered list supported)
-    - [x] this is a complete item
-    - [ ] this is an incomplete item
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-Result:
+Right aligned columns
 
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-### Tables
 
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
+## Links
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+[link text](http://dev.nodeca.com)
 
-### SHA references
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-Any reference to a commit’s SHA-1 hash will be automatically converted into a link to that commit on GitHub.
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
-    16c999e8c71134401a78d4d46435517b2271d6ac
-    mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
-    mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
 
-### Issue references within a repository
+## Images
 
-Any number that refers to an Issue or Pull Request will be automatically converted into a link.
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-    #1
-    mojombo#1
-    mojombo/github-flavored-markdown#1
-    
-### Username @mentions
+Like links, Images also have a footnote style syntax
 
-Typing an `@` symbol, followed by a username, will notify that person to come and view the comment. This is called an “@mention”, because you’re mentioning the individual. You can also @mention teams within an organization.
+![Alt text][id]
 
-### Emoji
+With a reference later in the document defining the URL location:
 
-GitHub supports emoji! Check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/).
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-## References
 
-* http://blog.ghost.org/markdown/
-* https://guides.github.com/features/mastering-markdown/
+## Plugins
+
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+
+
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
+
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+
+
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
+
+++Inserted text++
+
+
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+
+==Marked text==
+
+
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+:   Definition 1
+with lazy continuation.
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
