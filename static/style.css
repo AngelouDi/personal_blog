@@ -96,3 +96,13 @@ a {
 .nav_links li a:hover {
     color: var(--main-color);
 }
+
+.contact_logo {
+    width: 64px;
+    height: 64px;
+    transition: 1s;
+}
+
+.contact_logo:hover {
+    transform: rotate(180deg);
+}
