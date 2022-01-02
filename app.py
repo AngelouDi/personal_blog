@@ -1,9 +1,8 @@
 import sys
 from datetime import datetime
-from flask import Flask, render_template, render_template_string
-from flask_flatpages import FlatPages, pygments_style_defs, pygmented_markdown
+from flask import Flask, render_template
+from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
-import jinja2
 import re
 
 DEBUG = True
@@ -58,10 +57,13 @@ def index():
     posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"), reverse=True)
     return render_template('index.html', posts=posts)
 
+@app.route("/contact/")
+def contact():
+    return render_template('contact.html')
+
 
 @app.template_filter()
 def regex_replace(s, find, replace):
-    """A non-optimal implementation of a regex filter"""
     return re.sub(find, replace, s)
 
 

@@ -36,6 +36,12 @@ h1 {
     padding: 8px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px #000000;
+    transition: 0.3s;
+}
+
+.posts_div:hover {
+    background-color: #28282a;
+    transform: scale(1.02);
 }
 
 .profile_pic {
@@ -44,7 +50,11 @@ h1 {
     width: 120px;
     height: 120px;
     transform: rotate(-18deg);
+    transition: 1s;
+}
 
+.profile_pic:active {
+    transform: rotate(18deg);
 }
 
 .post_metadata {
@@ -78,10 +88,11 @@ header {
     padding: 0px 20px;
 }
 
-.nav_links li a:hover {
-    color: var(--main-color);
-}
 
 a {
     color: var(--accent-color);
+    transition: 0.3s;
+}
+.nav_links li a:hover {
+    color: var(--main-color);
 }
