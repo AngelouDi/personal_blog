@@ -1,0 +1,16 @@
+{% for post in posts %}
+<div class="posts_div content">
+    <div class="post_title">
+        <a class='post_title' , href="{{post.path | regex_replace('^.*/', '')}}">
+            {{ post.title }}
+        </a>
+    </div>
+    <div class="post_description">
+        {{ post.description }}
+    </div>
+    <div class="post_metadata">
+        <span>{{ post.date }}</span>
+        <span>{{ post.tags }}</span>
+    </div>
+</div>
+{% endfor %}

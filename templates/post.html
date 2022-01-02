@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='edited_pygment.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="markdown">
+    <h1 style="text-align: center; padding: 0px; border: none; color: var(--main-color)">{{ post.title }}</h1>
+    <p style="text-align: center; padding: 0px; font-style: italic; font-size: small;">{{ post.date }}</p>
+    {{ post.html|safe }}
+</div>
+
+{% endblock %}

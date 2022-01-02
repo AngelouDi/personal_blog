@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="content">
+
+    <div style="float: left;">
+        <img class="profile_pic" src="{{ url_for('static', filename='profile.jpg') }}">
+    </div>
+
+    <div style="margin-left: 140px">
+        <h1> Hey there! I am Dimitris</h1>
+        <p>I am an unegraduate student at
+            <a href="https://www.ece.tuc.gr/index.php?id=4101" title="Technical University of Crete">Technical
+                University of Crete</a>.</p>
+    </div>
+
+    <div style="margin-top: 60px">
+        {% include 'posts_block.html' %}
+    </div>
+</div>
+
+{% endblock %}
