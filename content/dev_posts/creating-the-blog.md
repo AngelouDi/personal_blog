@@ -169,6 +169,8 @@ by adding ```{% include 'posts_block.html' %}``` to your index.html.
 
 For syntax highlighting I am using pygments and adding `FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']` these two extensions.
 
+You will need to add `Pygments` to your *requirements.txt*
+
 I wanted a dark theme for my site therefore I had to edit the pygments css: I generated it using
 
 ```
