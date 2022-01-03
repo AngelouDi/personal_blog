@@ -16,13 +16,14 @@ Searching the web may guide you to this:
 \newcommand{\en}{\selectlanguage{english}}
 \newcommand{\gr}{\selectlanguage{greek}}
 ```
- where you will have to prepend `\gr`, `\en` before changing the language.
- Let's not do that mkay?
+
+where you will have to prepend `\gr`, `\en` before changing the language.
+Let's not do that mkay?
  
- # The correct way
+# The correct way
  
- Firstly, remove code above and add these packages to your LaTeX document:
- ```
+Firstly, remove code above and add these packages to your LaTeX document:
+```
 \usepackage{alphabeta}
 \usepackage[utf8]{inputenc}
 \usepackage[greek, english]{babel}
