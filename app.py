@@ -21,14 +21,14 @@ app.config.from_object(__name__)
 @app.route("/dev_posts/")
 def dev_posts():
     posts = [p for p in flatpages if p.path.startswith(DEV_POSTS_DIR)]
-    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"), reverse=True)
+    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"))
     return render_template('posts.html', posts=posts)
 
 
 @app.route("/personal_posts/")
 def personal_posts():
     posts = [p for p in flatpages if p.path.startswith(PERSONAL_POSTS_DIR)]
-    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"), reverse=True)
+    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"))
     return render_template('posts.html', posts=posts)
 
 
@@ -49,7 +49,7 @@ def personal_post(name):
 @app.route('/')
 def index():
     posts = [p for p in flatpages]
-    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"), reverse=True)
+    posts.sort(key=lambda item: datetime.strptime(item['date'], "%d/%m/%Y"))
     return render_template('index.html', posts=posts)
 
 
